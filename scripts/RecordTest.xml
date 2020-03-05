@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="Suite">
+    <test name="Signup in hippovideo and choose plans">
+        <classes>
+            <class name="io.hippovideo.recording.tests.HomePageTests">
+                <methods>
+                    <include name="choosePlans"/>
+                </methods>
+            </class>
+        </classes>
+    </test>
+</suite>

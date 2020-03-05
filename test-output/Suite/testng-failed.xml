@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
+<suite guice-stage="DEVELOPMENT" name="Failed suite [Suite]">
+  <test thread-count="5" name="Signup in hippovideo(failed)">
+    <classes>
+      <class name="io.hippovideo.recording.tests.HomePageTests">
+        <methods>
+          <include name="signUp"/>
+          <include name="getReport"/>
+        </methods>
+      </class> <!-- io.hippovideo.recording.tests.HomePageTests -->
+    </classes>
+  </test> <!-- Signup in hippovideo(failed) -->
+  <test thread-count="5" name="Choose plans(failed)">
+    <classes>
+      <class name="io.hippovideo.recording.tests.HomePageTests">
+        <methods>
+          <include name="getReport"/>
+          <include name="choosePlans"/>
+        </methods>
+      </class> <!-- io.hippovideo.recording.tests.HomePageTests -->
+    </classes>
+  </test> <!-- Choose plans(failed) -->
+</suite> <!-- Failed suite [Suite] -->
