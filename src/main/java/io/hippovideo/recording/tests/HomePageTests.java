@@ -19,32 +19,29 @@ public class HomePageTests extends TestBase {
         homePage = PageFactory.initElements(driver, HomePage.class);
     }
 
-    /*@Test
-    public void signUp() {
-        extentTest = extentReports.createTest("Sign up for free");
-        boolean res = homePage.signUpForFree();
-        //softAssert.assertEquals(res, true);
-        if (res) {
-            extentTest.log(PASS, "Able to sign up");
-        } else {
-            extentTest.log(FAIL, "Unable to sign up");
-        }
-        extentReports.flush();
-        //softAssert.assertAll();
-    }*/
 
     @Test
     public void choosePlans() {
         extentTest = extentReports.createTest("Choose plans");
         boolean res = homePage.selectPlans();
-        //softAssert.assertEquals(res, true);
         if (res) {
             extentTest.log(PASS, "Able to choose plans");
         } else {
             extentTest.log(FAIL, "Unable to choose plans");
         }
         extentReports.flush();
-        //softAssert.assertAll();
+    }
+
+    @Test
+    public void fillDomainForm(){
+        extentTest = extentReports.createTest("Fill Domain Form");
+        boolean res = homePage.fillDomainForms();
+        if (res) {
+            extentTest.log(PASS, "Domain form filled");
+        } else {
+            extentTest.log(FAIL, "Unable to fill domain forms");
+        }
+        extentReports.flush();
     }
 
 }

@@ -6,10 +6,13 @@ import com.aventstack.extentreports.reporter.ExtentHtmlReporter;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.chrome.ChromeOptions;
+import org.openqa.selenium.remote.DesiredCapabilities;
+import org.openqa.selenium.support.ui.WebDriverWait;
 import org.testng.annotations.AfterSuite;
 import org.testng.annotations.AfterTest;
 import org.testng.annotations.Test;
 
+import java.io.File;
 import java.text.SimpleDateFormat;
 import java.util.Calendar;
 import java.util.concurrent.TimeUnit;
@@ -49,16 +52,21 @@ public class TestBase {
                 System.setProperty("webdriver.chrome.driver", "src/main/resources/chromedriver_mac");
             }
             ChromeOptions chromeOptions = new ChromeOptions();
+            //chromeOptions.addArguments("--disable-notifications");
+            //chromeOptions.addExtensions(new File("extentions/hippovideoext.crx"));
+            //DesiredCapabilities desiredCapabilities = DesiredCapabilities.chrome();
+            //desiredCapabilities.setCapability(ChromeOptions.CAPABILITY,chromeOptions);
             driver = new ChromeDriver(chromeOptions);
             driver.manage().window().maximize();
             driver.get(url);
             driver.manage().timeouts().pageLoadTimeout(10, TimeUnit.SECONDS);
+            WebDriverWait wait = new WebDriverWait(driver, 15000);
         }
     }
 
     @AfterSuite
     public void getReport() {
-        driver.close();
+        //driver.close();
         extentReports.flush();
         System.out.println("Report Generated");
     }

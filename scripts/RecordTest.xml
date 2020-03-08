@@ -10,4 +10,59 @@
             </class>
         </classes>
     </test>
+    <test name="Fill the domain form">
+        <classes>
+            <class name="io.hippovideo.recording.tests.HomePageTests">
+                <methods>
+                    <include name="fillDomainForm"/>
+                </methods>
+            </class>
+        </classes>
+    </test>
+    <test name="Open create video screen">
+        <classes>
+            <class name="io.hippovideo.recording.tests.RecordVideoTests">
+                <methods>
+                    <include name="openCreateVideoScreen"/>
+                </methods>
+            </class>
+        </classes>
+    </test>
+    <test name="Import videos">
+        <classes>
+            <class name="io.hippovideo.recording.tests.RecordVideoTests">
+                <methods>
+                    <include name="importVideo"/>
+
+                </methods>
+            </class>
+        </classes>
+    </test>
+    <test name="Open personalization tab">
+        <classes>
+            <class name="io.hippovideo.recording.tests.RecordVideoTests">
+                <methods>
+                    <include name="openPersonalization"/>
+                </methods>
+            </class>
+        </classes>
+    </test>
+    <test name="Add personalizations">
+        <classes>
+            <class name="io.hippovideo.recording.tests.RecordVideoTests">
+                <methods>
+                    <include name="addPersonalizations"/>
+                </methods>
+            </class>
+        </classes>
+    </test>
+    <test name="Verify personalizations">
+        <classes>
+            <class name="io.hippovideo.recording.tests.RecordVideoTests">
+                <methods>
+                    <include name="verifyPersonalizations"/>
+                </methods>
+            </class>
+        </classes>
+    </test>
 </suite>
